@@ -1,7 +1,6 @@
 body {
     margin: 0;
 }
-
 #calculator {
     background-color: darkblue;
     height: 80vh;
@@ -25,11 +24,10 @@ body {
     background-color: aliceblue;
     border-radius: 5px;
     padding: 10px;
-    text-align: center;
-    /* align-self: center; */
-    /* border-color: indigo;
-    border-width: 5px;
-    border-style: solid; */
+    display: flex;
+    justify-content: center;
+    /* align-content: center; */
+    
 }
 
 #buttonPad {
