@@ -1,7 +1,6 @@
 const display = document.getElementById("display");
 let startText = true;
-let firstNumber = '';
-let secondNumber = '';
+
 
 function clearDisplay() {
     display.textContent = '';
@@ -16,25 +15,10 @@ function equal() {
     }
 }
 function calculate() {
-
-    getValues();
-    switch (symbol) {
-        case '+':
-            return parseInt(firstNumber) + parseInt(secondNumber);
-            break;
-            case '-':
-                return parseInt(firstNumber) - parseInt(secondNumber);
-                break;
-        default:
-            startText = true;
-            return 'error';
-    }
-}
-
-function getValues(){
     const input = display.textContent;
     const symbols = ['+', '-', ',', '/'];
-
+    let firstNumber = '';
+    let secondNumber = '';
     let firstFound = false;
     let symbol;
     let cont = 0;
@@ -55,8 +39,20 @@ function getValues(){
     console.log(firstNumber);
     console.log(secondNumber);
     console.log(symbol);
-    calculate(firtstNumber, secondNumber, symbol);
+    
+    switch (symbol) {
+        case '+':
+            return parseInt(firstNumber) + parseInt(secondNumber);
+            break;
+            case '-':
+                return parseInt(firstNumber) - parseInt(secondNumber);
+                break;
+        default:
+            startText = true;
+            return 'error';
+    }
 }
+
 
 //Es invalido si hay dos signos seguidos
 //Es invalido si hay una division por cero
